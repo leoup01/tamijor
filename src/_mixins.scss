@@ -1,0 +1,33 @@
+//Mixins
+@mixin f-fonts($f1,$f2,$colorfont){
+  font-family: $f1, $f2;
+  color: $colorfont;
+}
+
+@mixin f-marginLR($ml,$mr){
+  margin-left: $ml;
+  margin-right: $mr;
+}
+@mixin f-marginTB($mt,$mb){
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+
+@mixin f-paddingTB($mt,$mb){
+  padding-top: $mt;
+  padding-bottom: $mb;
+}
+
+@mixin f-backgroundAndColor($bc,$c){
+  background-color: $bc;
+  color: $c;
+}
+
+@mixin f-border($width, $style, $color) {
+  border: $width $style $color;
+}
+
+@mixin f-wh($w,$h) {
+  width: $w;
+  height: $h;
+}
