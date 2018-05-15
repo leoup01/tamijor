@@ -9,6 +9,7 @@ import withAuthorization from '../components/withAuthorization';
 import { Row, Col, Container } from 'reactstrap';
 
 const AccountPage = () =>
+  <div>
   <AuthUserContext.Consumer>
     {authUser =>
       <div>
@@ -49,8 +50,26 @@ const AccountPage = () =>
       </div>
     }
   </AuthUserContext.Consumer>
+  <AuthUserContext.Consumer>
+    {authUser => {console.log(authUser);
+      console.log(authUser.infoUser);
+      console.log(authUser.authUser);
+      }
+    }
+  </AuthUserContext.Consumer>
+  </div>
+
+  const show = (authUser) =>{
+    console.log(authUser);
+    console.log(authUser.infoUser);
+  }
 
 //export default AccountPage;
 const authCondition = (authUser) => !!authUser;
 
-export default withAuthorization(authCondition)(AccountPage);
+const authCondition2 = (authUser) => !!authUser && authUser.infoUser === 'ADMIN';
+console.log(authCondition2());
+
+const roleCondition = (role) => true;
+
+export default withAuthorization(authCondition)(roleCondition)(AccountPage);

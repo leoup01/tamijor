@@ -143,5 +143,6 @@ const UserList = ({ users }) =>
 
   
 const authCondition = (authUser) => !!authUser;
+const roleCondition = (role) => true;
 
-export default withAuthorization(authCondition)(UsersPage);
+export default withAuthorization(authCondition)(roleCondition)(UsersPage);

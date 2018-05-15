@@ -8,8 +8,8 @@ const withAuthentication = (Component) => {
   	constructor(props) {
       super(props);
       this.state = {
-        authUser: null,
-        infoUser: 'xxx',
+        userInfo: null,
+        userRole: 'unset',
       };
       console.log(this.state);
     }
@@ -17,16 +17,37 @@ const withAuthentication = (Component) => {
     componentDidMount() {
       firebase.auth.onAuthStateChanged(authUser => {
         authUser
-          ? this.setState(() => ({ authUser: authUser }))
-          : this.setState(() => ({ authUser: null }));
+          ? this.updateState(authUser)
+          : this.setState(() => ({ userInfo: null }));
       });
     }
 
+    updateState = (au) =>{
+      //console.log(au.authUser);
+      this.setState({
+        userInfo: au,
+        userRole: 'ADMIN',
+      });
+    }
+
+    /*
+    componentDidMount() {
+      firebase.auth.onAuthStateChanged(authUser => {
+        authUser
+          ? this.setState(() => ({ authUser }))
+          : this.setState(() => ({ authUser: null }));
+      });
+    }*/
+
     render() {
     	const { authUser } = this.state;
-      console.log(authUser);
+      const infoUser = this.state.infoUser;
+      const v = {infoUser,authUser};
+      //console.log(infoUser);
+      //console.log(v);
+      console.log(this.state);
       return (
-        <AuthUserContext.Provider value={authUser}>
+        <AuthUserContext.Provider value={this.state}>
           <Component />
         </AuthUserContext.Provider>
       );

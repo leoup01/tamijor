@@ -44,4 +44,6 @@ const UserList = ({ users }) =>
   
 const authCondition = (authUser) => !!authUser;
 
-export default withAuthorization(authCondition)(DashboardPage);
+const roleCondition = (role) => true;
+
+export default withAuthorization(authCondition)(roleCondition)(DashboardPage);
