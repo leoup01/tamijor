@@ -28,6 +28,6 @@ const check = (authUser) => {
 	console.log(authUser);
 	return (!!authUser);
 }
-const roleCondition = (role) => (role==='ADMIN')? true : false;
+const roleCondition = (role) => (role==='Administrador')? true : false;
 
 export default withAuthorization(authCondition)(roleCondition)(AdminPage);

@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthUserContext from './AuthUserContext';
-import { firebase } from '../firebase';
+import { firebase, db } from '../firebase';
 
 const withAuthentication = (Component) => {
   class WithAuthentication extends React.Component {
@@ -23,11 +23,18 @@ const withAuthentication = (Component) => {
     }
 
     updateState = (au) =>{
-      //console.log(au.authUser);
+      console.log(au.uid);
       this.setState({
-        userInfo: au,
-        userRole: 'ADMIN',
+        userInfo: au
+        //userRole: 'ADMIN',
       });
+      this.getUserRol(au.uid);
+      
+    }
+
+    getUserRol = (au) => {
+        console.log("getUserRol");
+        db.onceGetUserRole(au).then(snapshot => this.setState(() => ({ userRole: snapshot.val() })) );
     }
 
     /*

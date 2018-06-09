@@ -13,6 +13,10 @@ export const doRemove = (from , id) =>
 	db.ref().child(from).child(id).remove();
 
 export const onceGetUsers = () =>
-  db.ref('users').once('value');
+  	db.ref('users').once('value');
+
+export const onceGetUserRole = (id) =>
+	db.ref('users/' + id + '/role').once('value');
+
 
 // Other Entity APIs ...

@@ -3,14 +3,16 @@ import Navigation from '../components/Navigation';
 import withAuthorization from '../components/withAuthorization';
 import { db } from '../firebase';
 import { auth } from '../firebase';
-import { alertSimple } from '../components/Alerts';
+import { alertSimple, alertConfirmDelete } from '../components/Alerts';
 import { SignUpLinkButton } from './SignUp';
 
 //import * as admin from 'firebase-admin';
 //import serviceAccount from '../constants/eventostamijor-firebase-adminsdk-h46ue-39783dbf4c';
 
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Table, Container } from 'reactstrap';
-
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+const MySwal = withReactContent(Swal);
 /*
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -36,6 +38,24 @@ class UsersPage extends Component {
   }
 
   deleteUser = (uid) =>{
+    //alertConfirmDelete2('warning', 'Confirmación de eliminación de usuario').then(()=>{console.log("paso")});
+    MySwal.fire({
+        position: 'top-end',
+        title: 'Confirmación de eliminación de usuario',
+        text: "Esta acción no se puede revertir",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Eliminar'
+    }).then((result) => {
+          if (result.value) {
+            this.deleteUserDo(uid);
+        }
+    });
+  }
+
+  deleteUserDo = (uid) =>{
     db.doRemove('users', uid).then(() => {
             //this.setState(() => ({ users: this.state.users }));
             this.getAllUsers();
@@ -45,18 +65,6 @@ class UsersPage extends Component {
           });
   }
 
-/*
-  deleteUser = (uid) =>{
-    console.log("DELETE");
-    console.log(uid);
-    admin.auth().deleteUser(uid)
-    .then(function() {
-      console.log("Successfully deleted user");
-    })
-    .catch(function(error) {
-      console.log("Error deleting user:", error);
-    });
-  }*/
   deleteUser2 = (userKey) =>{
     console.log("DELETE");
     console.log(userKey);

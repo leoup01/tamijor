@@ -1,11 +1,11 @@
-import { auth } from './firebase';
+import { auth, auth2 } from './firebase';
 
 //Firebase's Authentication API
 
 
 // Sign Up
 export const doCreateUserWithEmailAndPassword = (email, password) =>
-  auth.createUserWithEmailAndPassword(email, password);
+  auth2.createUserWithEmailAndPassword(email, password);
 
 
 /* export const doCreateUserWithEmailAndPassword = (email, password, displayName) =>
@@ -22,16 +22,30 @@ export const doCreateUserWithEmailAndPassword = (email, password) =>
 
 // Sign Up
 export const doCreateUser = (email, password, displayName) =>{
-  auth.createUser({
+  auth2.createUser({
   email: email,
   password: password,
 })
   .then(function(userRecord) {
     // See the UserRecord reference doc for the contents of userRecord.
+    console.log(auth2.currentUser);
     console.log("Successfully created new user:", userRecord.uid);
+    auth2.signOut();
   })
   .catch(function(error) {
     console.log("Error creating new user:", error);
+  });
+}
+
+export const doGetCurrentUser = () => auth.currentUser;
+
+export const doCredential = () => auth.EmailAuthProvider.credential("a@a.com", "123qwe");
+
+export const doLinkCredentials = (a,b) =>{
+  auth.currentUser.link(this.doCredential()).then(function(user) {
+    console.log("Account linking success", user);
+  }, function(error) {
+    console.log("Account linking error", error);
   });
 }
 
