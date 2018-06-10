@@ -8,6 +8,14 @@ import withAuthorization from '../components/withAuthorization';
 
 import { Row, Col, Container } from 'reactstrap';
 
+const getEmail = (authUser) =>
+  (authUser)?( (authUser.userInfo)?(authUser.userInfo.email):("NO infoUser") ):( "NO authUser" );
+const getEmail2 = (authUser) =>{
+  let res="";
+  (authUser)?( (authUser.userInfo)?(res=authUser.userInfo.email):(res="NO infoUser") ):( res= "NO authUser" );
+  console.log(res);
+  //(authUser)?((authUser.infoUser)?(authUser.infoUser.email):("NO infoUser")):("NO authUser");
+}
 const AccountPage = () =>
   <div>
   <AuthUserContext.Consumer>
@@ -20,9 +28,9 @@ const AccountPage = () =>
           <Col sm="12" md="8" lg="8" xl="8">
             <div className="box-1">
               <h1>Información de la cuenta</h1>
-              <h3>Nombre de usuario: {authUser.username}</h3>
-              <h3>Correo electrónico: {authUser.email}</h3>
-              <h3>Rol: {authUser.role}</h3>
+              <h3>Nombre de usuario: {getEmail(authUser)}</h3>
+              <h3>Correo electrónico: {getEmail(authUser)}</h3>
+              <h3>Rol: {authUser.userRole}</h3>
             </div>
             
           </Col>
@@ -51,9 +59,9 @@ const AccountPage = () =>
     }
   </AuthUserContext.Consumer>
   <AuthUserContext.Consumer>
-    {authUser => {console.log(authUser);
-      console.log(authUser.infoUser);
-      console.log(authUser.authUser);
+    {authUser => {
+      console.log(authUser);
+      //console.log(authUser.userInfo[0]);
       }
     }
   </AuthUserContext.Consumer>
