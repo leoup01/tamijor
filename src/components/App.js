@@ -6,33 +6,27 @@ import {
 
 import '../styles.css';
 
-import Navigation from './Navigation';
-import LandingPage from '../routes/Landing';
-import SignUpPage from '../routes/SignUp';
-import SignInPage from '../routes/SignIn';
-import PasswordForgetPage from '../routes/PasswordForget';
-import DashboardPage from '../routes/Dashboard';
-import UsersPage from '../routes/Users';
-import AdminPage from '../routes/Admin';
-import AccountPage from '../routes/Account';
-
 import * as routes from '../constants/routes';
+import * as DynamicImportRoutes from './DynamicImportRoutes';
+
+import AppPublic from './AppPublic';
+import AppAdmin from './AppAdmin';
 
 import withAuthentication from './withAuthentication';
 
 const App = () =>
-  <Router>
+    <Router>
     <div>
-      <Route exact path={routes.LANDING} component={() => <LandingPage />} />
-      <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
-      <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
-      <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
-      <Route exact path={routes.DASHBOARD} component={() => <DashboardPage />} />
-      <Route exact path={routes.USERS} component={() => <UsersPage />} />
-      <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
-      <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
+      <AppPublic/>
+      <Route exact path={routes.SIGN_UP} component={() => <AppAdmin/>} />
+      <Route exact path={routes.SIGN_IN} component={() => <AppAdmin/>} />
+      <Route exact path={routes.PASSWORD_FORGET} component={() => <AppAdmin/>} />
+      <Route exact path={routes.DASHBOARD} component={() => <AppAdmin/>} />
+      <Route exact path={routes.USERS} component={() => <AppAdmin/>} />
+      <Route exact path={routes.ACCOUNT} component={() => <AppAdmin/>} />
+      <Route exact path={routes.ADMIN} component={() => <AppAdmin/>} />
     </div>
-  </Router>
+    </Router>
 
 //export default App;
-export default withAuthentication(App);
+export default (App);
