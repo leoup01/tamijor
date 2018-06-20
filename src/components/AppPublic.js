@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import '../styles.css';
+import '../slider.css';
 
 import * as routes from '../constants/routes';
 import * as DynamicImportRoutes from './DynamicImportRoutes';

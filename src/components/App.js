@@ -4,8 +4,6 @@ import {
   Route,
 } from 'react-router-dom';
 
-import '../styles.css';
-
 import * as routes from '../constants/routes';
 import * as DynamicImportRoutes from './DynamicImportRoutes';
 
@@ -13,6 +11,16 @@ import AppPublic from './AppPublic';
 import AppAdmin from './AppAdmin';
 
 import withAuthentication from './withAuthentication';
+
+/*import ReallySmoothScroll from 'really-smooth-scroll';
+ReallySmoothScroll.shim();
+ReallySmoothScroll.config({
+  mousewheelSensitivity: 6, // Default
+  keydownSensitivity: 6 // Default (When you press arrow down/up key)
+});*/
+import smoothscroll from 'smoothscroll-polyfill';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+smoothscroll.polyfill();
 
 const App = () =>
     <Router>

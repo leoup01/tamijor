@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import {
   Collapse,
   Navbar,
@@ -27,23 +26,23 @@ export default class NavbarCustom extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="header-fixed">
         <Navbar dark expand="md">
-          <b><NavbarBrand href="/">Home</NavbarBrand></b>
+          <b><NavbarBrand href="#">Home</NavbarBrand></b>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#seccionEventos">Eventos</NavLink>
+                <AnchorLink href='#eventos'>Eventos</AnchorLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#seccionNosotros">Nosotros</NavLink>
+                <AnchorLink href='#nosotros'>Nosotros</AnchorLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#seccionServicios">Servicios</NavLink>
+                <AnchorLink href='#servicios'>Servicios</AnchorLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#seccionContacto">Contacto</NavLink>
+                <AnchorLink href='#contacto'>Contacto</AnchorLink>
               </NavItem>
             </Nav>
           </Collapse>
