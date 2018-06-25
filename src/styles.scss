@@ -87,6 +87,28 @@ $color-blue3: #B2DBBF;
   z-index: 10;
 }
 
+.wel_header {
+    text-align: center;
+    color: #222222;
+    padding-top: 0;
+}
+.fw-heading.fw-heading-center {
+    padding-bottom: 40px;
+
+}
+.wel_header h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 25px;
+    font-family: 'Roboto Slab', serif !important;
+    color: #222222;
+}
+.wel_header p {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 footer {
   @extend %ext1;

@@ -18,9 +18,14 @@ ReallySmoothScroll.config({
   mousewheelSensitivity: 6, // Default
   keydownSensitivity: 6 // Default (When you press arrow down/up key)
 });*/
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel, faClock } from '@fortawesome/free-solid-svg-icons'
+
 import smoothscroll from 'smoothscroll-polyfill';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 smoothscroll.polyfill();
+library.add(faStroopwafel, faClock)
 
 const App = () =>
     <Router>
