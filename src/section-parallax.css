@@ -1,5 +1,31 @@
-.section-services {
+#testimonials {
+  min-height: 350px;
+  background: #fff;
+  padding: 80px 0; }
+
+.section-services2 {
   background: url("images/lgb2.jpg") no-repeat scroll center center/cover; }
+
+.section-services {
+  background: url("images/lgb2.jpg"); }
+
+.section-testimonials {
+  background: url("images/lgb3.png"); }
+
+.parallax {
+  /* The image used */
+  /* Full height */
+  height: 100% !important;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important; }
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll; } }
 
 .section-padding {
   padding: 120px 0; }

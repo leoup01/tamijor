@@ -3,6 +3,7 @@ $color-red: #FF1654;
 $color-blue1: #247BA0;
 $color-blue2: #70C1B3;
 $color-blue3: #B2DBBF;
+$color-black1: #222222;
 
 @import "button.scss";
 @import url('https://fonts.googleapis.com/css?family=Righteous|Roboto|Roboto+Slab');
@@ -42,6 +43,13 @@ $color-blue3: #B2DBBF;
   @include f-fonts('Roboto Slab',cursive,white);
 }
 
+h1, h2, h3, h4 {
+  @include f-fonts('Roboto Slab',serif,$color-black1);
+}
+
+p{
+  @include f-fonts('Roboto',serif,$color-black1);
+}
 
 .box-1{
 	color: black !important; 

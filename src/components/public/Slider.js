@@ -37,7 +37,7 @@ const content = [
 const SliderCustom = (props) => {
   return (
   	<section>
-  	<Slider className="slider-wrapper">
+  	<Slider className="slider-wrapper" autoplay="5000">
 			{content.map((item, index) => (
 				<div
 					key={index}

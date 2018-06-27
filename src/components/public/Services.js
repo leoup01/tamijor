@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import '../../services.css';
+import '../../section-parallax.css';
 
 const Services = (props) => {
   return (
-  	<section class="section-services overlay section-padding" id="servicios">
+  	<section class="section-services parallax overlay section-padding" id="servicios">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
