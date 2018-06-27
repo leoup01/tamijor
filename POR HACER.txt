@@ -1,0 +1,8 @@
+- Cambiar clave api de google mas
+- .env
+
+
+FIXES
+
+- Pagina insegura por imagen
+Mixed Content: The page at 'https://eventostamijor.firebaseapp.com/' was loaded over HTTPS, but requested an insecure image 'http://svgshare.com/i/41_.svg'. This content should also be served over HTTPS.

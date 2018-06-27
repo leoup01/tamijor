@@ -17,7 +17,6 @@ const Landing = () =>
       <Events/>
       <Testimonials/>
     	<Contact/>
-    	<h1>Landing Page</h1>
     </div>
     <Footer/>
   </div>

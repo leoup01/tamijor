@@ -2,9 +2,45 @@ import React, { Component } from 'react';
 import { Row, Col, Container, Input, FormGroup, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import faBeer from '@fortawesome/fontawesome-free-solid/faBeer'
+import Map from './Map';
 import '../../section-normal.css';
 
-const Contact = (props) => {
+
+class Contact extends React.Component {
+  constructor(props) {
+      super(props);
+
+    }
+
+
+  render() {
+        return(  
+          <section id="contacto">
+            <Container>
+                <Row>
+                    <Col md="12">
+                        <div class="wel_header">
+                            <h2>Contactenos</h2>
+                            <p>La librería virtual afrece gran variedad de opciones para los amantes de la lectura. Nuestra página web cuenta con las siguientes caracteristicas.</p>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm="12" md="6">
+
+                    </Col>
+                    <Col sm="12" md="6">
+                        <ContactForm/>
+                    </Col>
+                </Row>
+            </Container>
+            <Map/>
+        </section>
+      );
+  }
+}
+
+const Contact2 = (props) => {
   return (
         <section id="contacto">
             <Container>
@@ -25,6 +61,10 @@ const Contact = (props) => {
                     </Col>
                 </Row>
             </Container>
+            <Row>
+              <Map/>
+
+            </Row>
         </section>
   );
 };

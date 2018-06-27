@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous|Roboto|Roboto+Slab');
 
-#nosotros, #eventos, #contacto {
+#nosotros, #eventos {
     min-height: 350px;
     background: #fff;
     padding: 80px 0;
+}
+
+#contacto {
+    min-height: 350px;
+    background: #fff;
+    padding-top: 80px;
 }
 
 #nosotros .single_item {
