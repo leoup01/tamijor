@@ -24,6 +24,8 @@ import { faStroopwafel, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import smoothscroll from 'smoothscroll-polyfill';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+import '../animate.css';
 smoothscroll.polyfill();
 library.add(faStroopwafel, faClock)
 

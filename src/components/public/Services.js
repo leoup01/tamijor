@@ -1,20 +1,25 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
+import ScrollAnimation from 'react-animate-on-scroll';
 import '../../section-parallax.css';
 
 const Services = (props) => {
   return (
   	<section class="section-services parallax overlay section-padding" id="servicios">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-                    <div class="page-title">
-                        <h2>Servicios</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum fugiat!</p>
+            <ScrollAnimation animateIn="fadeIn">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                        <div class="page-title">
+                            <h2>Servicios</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum fugiat!</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="flipInX">
+            <Row>
+
                 <div class="col-sm-12 col-md-4">
                     <div class="services-table">
                         <h3 class="text-uppercase price-title">Servicio 1</h3>
@@ -66,7 +71,8 @@ const Services = (props) => {
                         <a href="#" class="button">Purchase</a>
                     </div>
                 </div>
-            </div>
+            </Row>
+            </ScrollAnimation>
         </div>
     </section>
   );

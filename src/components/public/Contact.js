@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Row, Col, Container, Input, FormGroup, Button } from 'reactstrap';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import faBeer from '@fortawesome/fontawesome-free-solid/faBeer'
 import Map from './Map';
 import '../../section-normal.css';
 
 
-class Contact extends React.Component {
+/*class Contact extends React.Component {
   constructor(props) {
       super(props);
 
@@ -38,9 +39,9 @@ class Contact extends React.Component {
         </section>
       );
   }
-}
+}*/
 
-const Contact2 = (props) => {
+const Contact = (props) => {
   return (
         <section id="contacto">
             <Container>
@@ -61,10 +62,9 @@ const Contact2 = (props) => {
                     </Col>
                 </Row>
             </Container>
-            <Row>
-              <Map/>
-
-            </Row>
+            <ScrollAnimation animateIn="pulse">
+            <Map/>
+            </ScrollAnimation>
         </section>
   );
 };
