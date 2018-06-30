@@ -29,6 +29,10 @@
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+
+    h1,h2,h3,h4,h5, p{
+        color: white;
+    }
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */

@@ -21,6 +21,8 @@
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important; }
+  .parallax h1, .parallax h2, .parallax h3, .parallax h4, .parallax h5, .parallax p {
+    color: white; }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
