@@ -1,45 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col, Container, Input, FormGroup, Button } from 'reactstrap';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import faBeer from '@fortawesome/fontawesome-free-solid/faBeer'
 import Map from './Map';
 import '../../section-normal.css';
-
-
-/*class Contact extends React.Component {
-  constructor(props) {
-      super(props);
-
-    }
-
-
-  render() {
-        return(  
-          <section id="contacto">
-            <Container>
-                <Row>
-                    <Col md="12">
-                        <div class="wel_header">
-                            <h2>Contactenos</h2>
-                            <p>La librería virtual afrece gran variedad de opciones para los amantes de la lectura. Nuestra página web cuenta con las siguientes caracteristicas.</p>
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm="12" md="6">
-
-                    </Col>
-                    <Col sm="12" md="6">
-                        <ContactForm/>
-                    </Col>
-                </Row>
-            </Container>
-            <Map/>
-        </section>
-      );
-  }
-}*/
 
 const Contact = (props) => {
   return (
@@ -49,7 +13,6 @@ const Contact = (props) => {
                     <Col md="12">
                         <div class="wel_header">
                             <h2>Contactenos</h2>
-                            <p>La librería virtual afrece gran variedad de opciones para los amantes de la lectura. Nuestra página web cuenta con las siguientes caracteristicas.</p>
                         </div>
                     </Col>
                 </Row>
@@ -62,9 +25,7 @@ const Contact = (props) => {
                     </Col>
                 </Row>
             </Container>
-            <ScrollAnimation animateIn="pulse">
             <Map/>
-            </ScrollAnimation>
         </section>
   );
 };

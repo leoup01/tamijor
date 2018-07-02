@@ -42,7 +42,7 @@ const AboutUs = (props) => {
                                             <FontAwesomeIcon icon="clock" size="4x" />
                                         </div>
                                         <h4>Nuestro Horario</h4>
-                                        <p>Puedes comprar desde la cualquier lugar y usando cualquier dispositivo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo purus, dapibus id lacinia a, cursus et nulla. Donec sodales laoreet purus, nec facilisis diam luctus dapibus. Nam sed elementum tellus, sed condimentum sem. Nulla non metus nunc. Nulla at orci ultrices, varius erat ut, dignissim urna. Quisque non quam iaculis, faucibus urna eu, tristique lacus. Aenean eu orci ac nisl auctor vulputate malesuada sed orci. Quisque pellentesque, dolor eget pellentesque mollis, nulla lorem laoreet ipsum, quis molestie eros felis id nibh. Praesent vel elit congue, semper nisi sit amet, tincidunt velit.</p>
                                     </div>
                                 </div>
                             </div>

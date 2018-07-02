@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import Slider from 'react-animated-slider';
+import ScrollAnimation from 'react-animate-on-scroll';
 import 'react-animated-slider/build/horizontal.css';
 import '../../slider-animations.css';
 

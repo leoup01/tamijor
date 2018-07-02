@@ -8,14 +8,13 @@ const Services = (props) => {
   	<section class="section-services parallax overlay section-padding" id="servicios">
         <div class="container">
             <ScrollAnimation animateIn="fadeIn">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-                        <div class="page-title">
+                <Row>
+                    <Col md="12">
+                        <div class="wel_header">
                             <h2>Servicios</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum fugiat!</p>
                         </div>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </ScrollAnimation>
             <ScrollAnimation animateIn="flipInX">
             <Row>
