@@ -1,3 +1,5 @@
+$color-grey1: #53575A;
+
 @import url('https://fonts.googleapis.com/css?family=Righteous|Roboto|Roboto+Slab');
 
 #nosotros, #eventos {
@@ -8,8 +10,19 @@
 
 #contacto {
     min-height: 350px;
-    background: #fff;
+    background-color: $color-grey1;
     padding-top: 80px;
+    h2{
+      color: white;
+    }
+    input, textarea{
+      border-radius: 0px;
+      border: 0px;
+    }
+}
+
+.map{
+  margin-top: 3em;
 }
 
 #nosotros .single_item {

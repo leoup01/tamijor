@@ -3,7 +3,6 @@ import { Row, Col, Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import faBeer from '@fortawesome/fontawesome-free-solid/faBeer'
 import '../../section-normal.css';
-
 const AboutUs = (props) => {
   return (
         <section id="eventos">
@@ -16,6 +15,7 @@ const AboutUs = (props) => {
                     </Col>
                 </Row>
             </Container>
+            
         </section>
   );
 };

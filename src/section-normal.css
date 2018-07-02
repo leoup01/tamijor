@@ -6,8 +6,16 @@
 
 #contacto {
   min-height: 350px;
-  background: #fff;
+  background-color: #53575A;
   padding-top: 80px; }
+  #contacto h2 {
+    color: white; }
+  #contacto input, #contacto textarea {
+    border-radius: 0px;
+    border: 0px; }
+
+.map {
+  margin-top: 3em; }
 
 #nosotros .single_item {
   padding-top: 30px;

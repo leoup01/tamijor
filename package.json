@@ -9,6 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "0.1.0-11",
     "firebase": "^4.13.1",
+    "font-awesome": "^4.7.0",
     "google-maps-react": "^2.0.2",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.3",
