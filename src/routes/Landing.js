@@ -7,6 +7,7 @@ import Events from '../components/public/Events';
 import Testimonials from '../components/public/Testimonials';
 import Contact from '../components/public/Contact';
 import Footer from '../components/Footer';
+import 'font-awesome/css/font-awesome.min.css';
 const Landing = () =>
   <div>
   	<Navigation />

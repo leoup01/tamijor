@@ -42,6 +42,9 @@ export default class NavbarCustom extends React.Component {
                 <AnchorLink href='#servicios'>Servicios</AnchorLink>
               </NavItem>
               <NavItem>
+                <AnchorLink href='#testimonios'>Testimonios</AnchorLink>
+              </NavItem>
+              <NavItem>
                 <AnchorLink href='#contacto'>Contacto</AnchorLink>
               </NavItem>
             </Nav>

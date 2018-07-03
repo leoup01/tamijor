@@ -5,7 +5,7 @@ import { Row, Col, Container, Input, FormGroup, Button } from 'reactstrap';
 import Map from './Map';
 import '../../section-normal.css';
 import '../../social.css';
-import 'font-awesome/css/font-awesome.min.css';
+//import 'font-awesome/css/font-awesome.min.css';
 
 const Contact = (props) => {
   return (

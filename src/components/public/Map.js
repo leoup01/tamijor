@@ -103,7 +103,7 @@ class MapCustom extends Component {
           	zoom={15}>
  
         	<Marker
-    			title={'The marker`s title will appear as a tooltip.'}
+    			title={'Momentos Tamijor'}
     			name={'Momentos Tamijor'}
     			position={{lat: 10.0223952, lng: -84.0995243}} />
  

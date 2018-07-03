@@ -92,6 +92,9 @@ p {
   color: black !important;
   border: 5px solid #4CAF50 !important; }
 
+.color-white {
+  color: white; }
+
 .main-content {
   padding: 0px;
   margin-top: 75px; }
