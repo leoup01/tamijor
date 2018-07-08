@@ -16,7 +16,7 @@ const AboutUs = (props) => {
                         <div class="col-md-12">
                             <div class="wel_header">
                                 <h2>Sobre Nosotros</h2>
-                                <p>La librería virtual afrece gran variedad de opciones para los amantes de la lectura. Nuestra página web cuenta con las siguientes caracteristicas.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>

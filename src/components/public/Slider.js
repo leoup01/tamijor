@@ -4,9 +4,9 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import '../../slider-animations.css';
 
-import bg01 from '../../images/bg01.jpg';
-import bg02 from '../../images/bg02.jpg';
-import bg03 from '../../images/bg03.jpg';
+import bg01 from '../../images/lgb1.jpg';
+import bg02 from '../../images/lgb6.jpg';
+import bg03 from '../../images/lgb7.jpg';
 
 
 

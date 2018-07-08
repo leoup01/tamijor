@@ -10,7 +10,7 @@ const Footer = (props) => {
           <img src={logo1} alt="Momentos Tamijor"/>
         </Col>
   			<Col md="6">
-        		<p>Copyright © {(new Date().getFullYear())} ROBOTICO DEV, todos los derechos reservados.</p>
+        		<p>Copyright © {(new Date().getFullYear())} ROBOTTICO DEV, todos los derechos reservados.</p>
             <p>Momentos Tamijor</p>
   			</Col>
         <Col md="3">
